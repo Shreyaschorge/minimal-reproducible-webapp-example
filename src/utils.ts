@@ -11,6 +11,6 @@ export const db = [
 export async function getPaths() {
   // build paths for each of the sites in the previous two lists
   return db.map((item) => {
-    return { params: { site: item.slug } };
+    return { params: { slug: item.slug } };
   });
 }

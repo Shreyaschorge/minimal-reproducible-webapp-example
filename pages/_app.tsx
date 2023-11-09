@@ -21,14 +21,10 @@ export default function MyApp({
 
   return (
     <>
-      {host ? (
-        <main className={`${styles.main}`}>
-          <Component {...pageProps} />
-          <h1>host from props in _app.tsx : {host} </h1>
-        </main>
-      ) : (
-        <></>
-      )}
+      <main className={`${styles.main}`}>
+        <Component {...pageProps} />
+        <h1>host from props in _app.tsx : {host} </h1>
+      </main>
     </>
   );
 }

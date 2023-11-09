@@ -13,7 +13,6 @@ export default function MyApp({
 
   useEffect(() => {
     if (pageProps.host) {
-      // Log host on client
       console.log('host: ', pageProps.host);
       setHost(host);
     }

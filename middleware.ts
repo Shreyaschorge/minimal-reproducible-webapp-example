@@ -6,6 +6,7 @@ export const config = {
 };
 
 export default async function middleware(req: NextRequest) {
+  console.log('Middleware Intercepted');
   const url = req.nextUrl;
 
   const hostname = req.headers.get('host');

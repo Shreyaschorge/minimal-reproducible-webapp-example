@@ -10,7 +10,8 @@ export default async function middleware(req: NextRequest) {
 
   const hostname = req.headers.get('host');
 
-  const slug = db.find((site) => site.domain.includes(hostname))?.slug;
+  const slug =
+    db.find((site) => site.domain.includes(hostname))?.slug ?? 'root';
 
   // Prevent security issues – users should not be able to canonically access
   // the pages/sites folder and its respective contents.

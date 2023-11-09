@@ -6,7 +6,7 @@ export default function Home({ pageProps: { config } }) {
 
   useEffect(() => {
     if (config) {
-      console.log('config: ', config)
+      console.log('config: ', config);
       _setConfig(config);
     }
   }, [config]);
@@ -14,7 +14,7 @@ export default function Home({ pageProps: { config } }) {
   return (
     <>
       {_config ? (
-        <h1>pages/_sites/[slug]/index {_config.slug}</h1>
+        <h1>pages/_sites/[slug]/index {JSON.stringify(_config)}</h1>
       ) : (
         <h2>pages/_sites/[slug]/index no _config</h2>
       )}

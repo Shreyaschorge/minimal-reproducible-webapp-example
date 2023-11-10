@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { db } from './src/utils';
 
 export const config = {
-  matcher: ['/'],
+  matcher: ['/', '/_sites/:slug'],
 };
 
 export default async function middleware(req: NextRequest) {

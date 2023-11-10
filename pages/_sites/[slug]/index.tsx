@@ -1,8 +1,14 @@
 import { useEffect, useState } from 'react';
 import { db, getPaths } from '../../../src/utils';
 
-export default function Home({ pageProps: { config } }) {
-  const [_config, _setConfig] = useState();
+interface Props {
+  config: string;
+}
+
+export default function Home({ config }: Props) {
+  console.log('config: ', config);
+
+  const [_config, _setConfig] = useState<string | null>(null);
 
   useEffect(() => {
     if (config) {

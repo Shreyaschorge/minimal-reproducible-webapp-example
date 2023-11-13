@@ -3,7 +3,7 @@ import App, { AppProps, AppContext, AppInitialProps } from 'next/app';
 import styles from '@/styles/App.module.css';
 import { useEffect, useState } from 'react';
 
-type AppAdditionalProps = { host: string };
+type AppAdditionalProps = { host: string; something: string; hostUrl: string };
 
 export default function MyApp({
   Component,
@@ -42,6 +42,7 @@ MyApp.getInitialProps = async (
   const pageProps = {
     ...ctx.pageProps,
     host: context.ctx.req?.headers.host,
+    something: undefined,
     hostUrl: `https://${context.ctx.req?.headers.host}`,
   };
 

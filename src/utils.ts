@@ -1,8 +1,9 @@
 export const db = [
   { slug: 'ttc', domain: 'http://ttc.plantingparty.org' },
+  { slug: 'maccha', domain: 'http://maccha.plantingparty.org' },
+  { slug: 'salesforce', domain: 'http://salesforce.plantingparty.org' },
   { slug: 'root', domain: 'http://www.plantingparty.org' },
 ];
-
 
 /**
  * Returns the paths for `getStaticPaths` based on the slug of every

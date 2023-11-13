@@ -42,6 +42,7 @@ MyApp.getInitialProps = async (
   const pageProps = {
     ...ctx.pageProps,
     host: context.ctx.req?.headers.host,
+    hostUrl: `https://${context.ctx.req?.headers.host}`,
   };
 
   return { ...ctx, pageProps } as AppAdditionalProps & AppInitialProps;

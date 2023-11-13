@@ -11,6 +11,8 @@ export default function MyApp({
 }: AppProps & AppAdditionalProps) {
   const [host, setHost] = useState<string | null>(null);
 
+  console.log('pageProps', pageProps);
+
   useEffect(() => {
     if (pageProps.host) {
       console.log('host: ', pageProps.host);
